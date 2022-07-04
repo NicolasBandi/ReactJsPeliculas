@@ -1,5 +1,6 @@
 import React  from 'react';
 import '../Hojas-de-estilo/peliculas.css';
+import CartWidget from './CartWidget';
 
 function Navbar () {
  return(
@@ -21,9 +22,11 @@ function Navbar () {
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">Coleccionista</a>
-        <a  href="index.html#carritoCompras" className="terms button" data-toggle="modal" data-target="#staticBackdrop"><i className="fas fa-shopping-cart"></i></a>
-        
       </li>
+      <li className="nav-item">
+        <CartWidget/>
+    </li>
+     
     </ul>
   </div>
 </nav>
