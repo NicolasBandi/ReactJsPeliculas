@@ -1,5 +1,5 @@
 import React  from 'react';
-import '../Hojas-de-estilo/peliculas.css';
+import '../Style/peliculas.css';
 import CartWidget from './CartWidget';
 
 function Navbar () {

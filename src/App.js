@@ -7,9 +7,11 @@ function App() {
     <div className="App">
       < Navbar />
       <ItemListContainer imprimirPeliculas="Pronto Catalogo Completo!"/>
+
       
     </div>
   );
+
 }
 
 export default App;
