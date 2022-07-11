@@ -1,14 +1,15 @@
 import React from 'react';
 import ItemCount from './/ItemCount';
 
-const ItemListContainer = ({imprimirPeliculas}) =>{
-      return(
-        <div>
-        <h1>{imprimirPeliculas}</h1>
-        <ItemCount/></div>
-        
 
-);
-}
+export const ItemListContainer = ({imprimirPeliculas}) =>{
+    const onAdd = (param) => {console.log(param)}
+      return(
+        <>
+        <div>{imprimirPeliculas}</div>
+        <ItemCount initial={1} stock={6} onAdd={onAdd}/>
+        </>
+  )
+};
 
 export default ItemListContainer;

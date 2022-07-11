@@ -1,35 +1,32 @@
 import React, {useState} from "react";
-import '../Style/peliculas.css';
 
-const ItemCount= () => {
-let peliculaStock = 5;
+const ItemCount= ({initial, stock, onAdd}) => {
 
-//let restar = cantidad-1
-const [cantidad, setRates] = useState(1); // uno por defecto
+  const[counter, setCounter] = useState(initial)
 
+ const add =() =>{
+ if (counter < stock){
+ const aux = counter+1
+ setCounter(aux)
+  }
+ };
 
-const sumar =() =>{
- if (cantidad < peliculaStock){
-  setRates(cantidad+1)
- } else{ (cantidad = 5)}
-};
-
-const restar =() =>{
-  if (cantidad > 1){
-  setRates(cantidad-1)}
-};
+  const subtract =() =>{
+  if (counter > initial){
+  const aux = counter-1 
+  setCounter(aux)
+  }
+ };
   
-
   return(
-    <div className="card-body">
+    <>
     <h5 className="card-title">Desafio Coder</h5>
-    <h5 className="numberCard">{cantidad}</h5>
-    <button onClick={restar} className="btn btn-danger">Restar</button>
-    <button onClick={sumar} className="btn btn-success">Sumar</button>
-  </div>
-  );
-
-
+    <h5 className="numberCard">{counter}</h5>
+    <button onClick={ subtract } className="btn btn-danger">Restar</button>
+    <button onClick={ add } className="btn btn-success">Sumar</button>
+    <div><button onClick={ onAdd } className="btn btn-dark">Agregar al carrito</button></div>
+    </>
+  )
 };
 
 export default ItemCount;
