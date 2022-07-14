@@ -1,0 +1,52 @@
+*{	margin: 0;
+	padding: 0;
+}
+
+.App {
+    background-color:whitesmoke;
+}
+
+.itemCard{
+    width: 15rem; 
+    height: 32rem;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    border-color: black;
+    
+ }
+ 
+ .img-card{
+     height: 27rem;
+
+ }
+ 
+ .item-price{
+     color:violet !important;
+     font-size: 30px;
+     text-align: center;
+
+ }
+ 
+ .item-titulo{
+     font-size: 20px;
+ }
+ 
+ 
+ .cardBody{
+     padding: 9rem ;
+     margin: 5rem;
+ }
+ 
+
+ @media (min-width: 768px){
+
+    .itemCard{
+        width: 18rem; 
+        height: 35rem;
+        margin-bottom: 3rem;
+        border-color: black;
+        
+     }
+ }
+
