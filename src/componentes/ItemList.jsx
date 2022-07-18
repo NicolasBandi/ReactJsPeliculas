@@ -1,16 +1,18 @@
 import React from 'react';
 import Item from './Item';
+import '../Style/ItemDetail.css';
 
 
 const ItemList =({data=[]}) => {
     return(
-        data.map( pelicula =>
-             <Item key={pelicula.id}
-             info={pelicula}/>
-        
-           )
-        
-    );
+      <div className='itemListCard'>
+          { data.map ( pelicula => {
+            return <Item key={pelicula.id} info={pelicula}/>
+             }
+        )   
+    }
+     </div>
+  );
 };
 console.log(ItemList)
 

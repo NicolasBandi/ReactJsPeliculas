@@ -6,47 +6,78 @@
     background-color:whitesmoke;
 }
 
+.nav_link{
+    text-decoration: none;
+    font-size: 30px;
+    color: red;
+}
+
 .itemCard{
-    width: 15rem; 
-    height: 32rem;
+    width: 18rem; 
+    height: 36rem;
     margin-left:auto;
     margin-right: auto;
-    margin-bottom: 3rem;
-    border-color: black;
-    
+    margin-bottom: 5em;
+    border-width: 2px;
+    border-color:black;
+    display:table;
  }
  
  .img-card{
-     height: 27rem;
-
+    height: 23rem;
+    border-radius: 30px;
  }
  
  .item-price{
      color:violet !important;
      font-size: 30px;
      text-align: center;
+     font-weight: bold;
 
  }
  
  .item-titulo{
      font-size: 20px;
+     font-weight: bold;
+     
  }
  
- 
+ div ul li{
+    text-decoration: none;
+    padding-right: 100px;
+    text-decoration: none;
+    font-size: 20px;
+ }
+
  .cardBody{
-     padding: 9rem ;
-     margin: 5rem;
+    margin: 1em;
+    height: 4em;
  }
  
 
- @media (min-width: 768px){
 
+ @media (max-width : 700px){
+    .itemListCard{
+        display:inline;
+
+    }
     .itemCard{
-        width: 18rem; 
-        height: 35rem;
-        margin-bottom: 3rem;
-        border-color: black;
-        
+        width: 12rem;
+        height: 25rem;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        border-radius: 20px;
+        border: none;
+  
      }
- }
-
+     .img-card{
+        height: 14rem;
+        width: 12rem;
+        margin-top: 0rem;
+        border-radius: 20px;
+    }
+     .containerItemList{
+        margin-top: 2em;
+        margin-bottom: 2em;
+        /* width: 23rem; */
+        column-count: 2;}}

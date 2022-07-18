@@ -1,0 +1,50 @@
+.container{
+    width: 98%;
+    margin-top: 100px;
+}
+
+.item-price{
+    color:violet !important;
+    font-size: 35px;
+}
+
+.detalle{
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    gap:40px;
+}
+.navbarItems{
+    margin-left: 400px;
+    
+}
+.contenido{
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center ;
+}
+
+.sinopsis{
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bolder;
+
+}
+
+
+.datail_image{
+    margin-right: 300px;
+    width: 400px;
+    height: 200px;
+}
+
+button{
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.itemListCard{
+    column-count: 3;
+}
