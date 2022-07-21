@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import '../Style/ItemDetail.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemCount from './ItemCount';
+import { Link } from "react-router-dom";
 
 
 
 export const ItemDetail =({data})=>{
+  const [alCarrito, setAlCarrito] =useState(false)
+
+  const onAdd = () => {
+     setAlCarrito(true)}
+
     return(
   <div className="container">
     <div className="detalle">
@@ -13,11 +20,17 @@ export const ItemDetail =({data})=>{
             <h1 className="nombre">{data.nombre}</h1>
             <h4 className = "sinopsis">{data.sinopsis}</h4>
             <p className="item-price"> Precio ${data.precio}</p>
-            <span className="d-flex justify-content-center"><button  id="botonComprar" type="button" className="btn btn-dark ">Comprar Pelicula </button></span>
+            {
+              alCarrito
+               ? <Link to ='/cart' type="button" className="btn btn-dark ">Finalizar Compra</Link>
+               : <ItemCount initial={1} stock={6} onAdd={onAdd}/>
+            }
+        
         </div>
-    </div>
-  </div>
+     </div>
+   </div>
     );
-}
+};
+
 
 export default ItemDetail;

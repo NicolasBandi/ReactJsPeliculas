@@ -1,4 +1,3 @@
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React,{useEffect,useState} from 'react';
@@ -105,8 +104,6 @@ export const ItemListContainer = ({imprimirPeliculas}) =>{
 
   const { formatoId } = useParams();
 
-   console.log(data)
-
    useEffect(()=>{
     const getData = new Promise (resolve =>{
       setTimeout(()=> {
@@ -126,7 +123,6 @@ export const ItemListContainer = ({imprimirPeliculas}) =>{
     return(
         <>
         <div>{imprimirPeliculas}</div>
-        <ItemCount initial={1} stock={6} onAdd={onAdd}/>
         <ItemList data ={data}/>
         </>
   )
