@@ -1,15 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap');
+
 *{	margin: 0;
 	padding: 0;
 }
 
-.App {
-    background-color:whitesmoke;
+.navFormato{
+    text-decoration: none;
+
+
 }
+.App {
+    text-align: center;
+    flex-direction: column;
+    display: wrap;
+    background-color: #E4E4E4;
+}
+
 
 .nav_link{
     text-decoration: none;
-    font-size: 30px;
+    font-size: 40px;
     color: red;
+    font-family: 'Berkshire Swash', cursive;
 }
 
 .itemCard{
@@ -18,19 +30,19 @@
     margin-left:auto;
     margin-right: auto;
     margin-bottom: 5em;
-    border-width: 2px;
+    border-width: px;
     border-color:black;
     display:table;
  }
  
  .img-card{
-    height: 23rem;
-    border-radius: 30px;
+    height: 22rem;
+    border-radius: 27px;
  }
  
  .item-price{
-     color:violet !important;
-     font-size: 30px;
+     color:violet;
+     font-size: 27px;
      text-align: center;
      font-weight: bold;
 
@@ -39,24 +51,34 @@
  .item-titulo{
      font-size: 20px;
      font-weight: bold;
+     margin: auto;
      
  }
  
  div ul li{
     text-decoration: none;
-    padding-right: 100px;
+    padding-right: 140px;
     text-decoration: none;
     font-size: 20px;
  }
 
  .cardBody{
-    margin: 1em;
-    height: 4em;
+    margin: 9em;
+    height: 5em;
  }
+
  
+ @media (max-width : 800px){
 
+    .App, html {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        display: wrap;
+        height: auto;
+   
+    }
 
- @media (max-width : 700px){
     .itemListCard{
         display:inline;
 
@@ -68,7 +90,6 @@
         font-size: 0.8rem;
         border-radius: 20px;
         border: none;
-  
      }
      .img-card{
         height: 14rem;
@@ -79,5 +100,14 @@
      .containerItemList{
         margin-top: 2em;
         margin-bottom: 2em;
-        /* width: 23rem; */
-        column-count: 2;}}
+        column-count: 2;
+        
+}
+div ul li{
+    text-decoration: none;
+    padding-right: 80px;
+    text-decoration: none;
+    font-size: 15px;
+ }
+}
+
