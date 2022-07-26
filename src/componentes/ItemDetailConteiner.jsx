@@ -110,6 +110,7 @@ const pelicula= [{
   precio:5600,
   imagen:"https://http2.mlstatic.com/D_NQ_NP_729698-MLA31968950878_082019-O.webp"
 }];
+
 export const ItemDetailContainer = () => {
   const [data,setData]=useState([{}]);
   const { detalleId } = useParams();
