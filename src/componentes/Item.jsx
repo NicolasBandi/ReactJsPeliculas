@@ -15,6 +15,7 @@ const Item = ({info}) => {
                 <button  type="button" className="btn btn-dark">Comprar Pelicula </button>
             </div>
       </div>
+      
 )};
 
 export default Item;

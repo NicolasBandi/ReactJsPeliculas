@@ -24,7 +24,7 @@ const ItemCount= ({initial, stock, onAdd}) => {
     <h5 className="numberCard">{counter}</h5>
     <button onClick={ subtract } className="btn btn-danger">Restar</button>
     <button onClick={ add } className="btn btn-success">Sumar</button>
-    <div><button onClick={ onAdd } className="btn btn-dark">Agregar al Carrito</button></div>
+    <div><button onClick={()=>onAdd(counter)} className="btn btn-dark">Agregar al Carrito</button></div>
     </>
   )
 };
