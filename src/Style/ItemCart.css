@@ -1,16 +1,59 @@
 .superContainer{
-    width: 100% ;
+    width: 800px; 
+    height: 350px;
     display: flex;
+    margin: auto;
     flex-direction: row;
-    
-    
+    transition: 0.35s;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: grey 0px 0px 10px 1px;
+
 }
 
 .itemCart img{
+    position: relative;
+    margin: auto;
     height: 350px;
     width: 250px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.carro{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.inside{
+    padding:5px;
+    font-size: 25px;
+}
+
+
+.btn-danger{
+    position:relative;
 
 }
 
 
 
+.superContainer:hover{
+    box-shadow:  0px 0px 10px 1px;
+    width:900px;
+}
+
+.superContainer:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.cerrar-compra{
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}

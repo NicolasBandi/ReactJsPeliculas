@@ -18,8 +18,9 @@ export const ItemDetail =({data})=>{
 
     return(
   <div className="container">
-    <div className="detalle">
+    <div className="img-div">
             <img classname="datail_image" src={data.imagen} alt="Pelicula" />
+    </div>
         <div className="contenido">
             <h1 className="nombre">{data.nombre}</h1>
             <h4 className = "sinopsis">{data.sinopsis}</h4>
@@ -29,10 +30,9 @@ export const ItemDetail =({data})=>{
                ? <Link to ='/cart' type="button" className="btn btn-dark ">Finalizar Compra</Link>
                : <ItemCount initial={1} stock={6} onAdd={onAdd}/>
             }
-        
+
         </div>
      </div>
-   </div>
     );
 };
 
