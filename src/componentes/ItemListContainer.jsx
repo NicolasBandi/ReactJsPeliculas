@@ -117,9 +117,6 @@ export const ItemListContainer = ({imprimirPeliculas}) =>{
     }
 },[formatoId])
 
-  const onAdd = (param) => {console.log(param)
-  }
-
     return(
         <>
         <div>{imprimirPeliculas}</div>

@@ -1,29 +1,41 @@
-import React, { useState, createContext  } from 'react';
+import React, { useState, useContext} from 'react';
 
-export const CartContext = createContext();
+const CartContext = React.createContext([]);
+
+export const useCartContext = () => useContext(CartContext);
 
 
 const CartContextProvider = ({children}) =>{
 
-    const [cartList, setCartList] = useState([]);
+    const [cart, setCart] = useState([]);
 
-    const addToCart= (data) => {
-      setCartList([...cartList,data])
-
+    const addToCart= (data, newQuantity) => {
+    const newCart = cart.filter(producto => producto.id !== data.id);
+    newCart.push ({...data, quantity: newQuantity});
+    setCart(newCart)
    }
 
-   const clean = () => setCartList([]);
-      
-   const isInCart = (id) =>cartList.find(data => data.id === id) ? true:false;
+   console.log(`carrito:`, cart)
 
-   const removePelicula =(id) => setCartList(cartList.filter(data=>data.id!==id))
+   const clear = () => setCart([]);
+      
+   const isInCart = (id) =>cart.find(product => product.id === id) ? true:false;
+
+   const removeItem=(id) => setCart(cart.filter(product =>product.id!==id))
+
+   const productoTotal =()=> cart.reduce((acumulador,productoActual) => acumulador + productoActual.quantity,0);
+
+   const precioTotal =() =>{return cart.reduce((prev,act)=>prev+act.quantity*act.precio,0)};
+
  return (
-   <CartContext.Provider value={{
-      cartList , 
+   <CartContext.Provider value={{ 
+      cart,
       addToCart,
-      clean,
-      removePelicula,
-      isInCart
+      clear,
+      removeItem,
+      isInCart,
+      precioTotal,
+      productoTotal
       }}> 
    {children} 
     </CartContext.Provider>
@@ -31,22 +43,3 @@ const CartContextProvider = ({children}) =>{
 }
 
 export default CartContextProvider;
-
-
-
-// agregar ítem al carrito
-
-  /* const addToCart = (item, newQuantity) => {
-   const {quantity = 0} =cart.find(pelicula=>pelicula.id === item.id) || {};
-   const newCart = cart.filter(pelicula=> pelicula.id !== item.id);
-   setCart([...newCart, {...item, quantity: quantity + newQuantity }]) 
-   }
-
-
-   const clear = () => setCart([]);
-      
-   const isInCart = (id) =>cart.find(pelicula => pelicula.id === id) ? true:false;
-
-   const removePeli =(id) => setCart(cart.filter(pelicula=>pelicula.id!==id))
-
-*/
