@@ -1,3 +1,4 @@
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './componentes/Navbar';
 import ItemListContainer from './componentes/ItemListContainer';
@@ -5,6 +6,7 @@ import ItemDetailContainer from './componentes/ItemDetailConteiner';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartContextProvider from './componentes/CartContext';
 import Cart from './componentes/Cart';
+
 
 
 function App() {
