@@ -24,6 +24,7 @@ const Cart = () => {
              <h4 >El precio total de su compra es de ${precioTotal()}</h4> 
 
              <button onClick={()=> clear (cart)} className="btn btn-danger" >Limpiar Carrito Completo </button>
+             <button  className="btn btn-success" >Finalizar Compra</button>
             </div>
         </>
     );
