@@ -15,8 +15,6 @@ const CartContextProvider = ({children}) =>{
     setCart(newCart)
    }
 
-   console.log(`carrito:`, cart)
-
    const clear = () => setCart([]);
       
    const isInCart = (id) =>cart.find(product => product.id === id) ? true:false;

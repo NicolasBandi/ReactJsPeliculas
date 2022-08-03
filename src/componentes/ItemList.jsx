@@ -14,6 +14,5 @@ const ItemList =({data=[]}) => {
      </div>
   );
 };
-console.log(ItemList)
 
 export default ItemList; 
