@@ -5,6 +5,7 @@
 }
 
 .navFormato{
+    position: fixed;
     text-decoration: none;
 
 
@@ -32,9 +33,11 @@
     font-family: 'Courier New', Courier, monospace;
     font-size:3rem;
     color: antiquewhite;
+
 }
 
 .div-container{
+
     display: flex;
     justify-content: space-around;
     width: 100%;

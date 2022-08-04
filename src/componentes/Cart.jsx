@@ -49,12 +49,13 @@ const Cart = () => {
              cart.map (product =><ItemCart key={product.id} product={product}/>)}
             
              <aside className="cerrar-compra">
+      
              <h4 >El precio total de su compra es de ${precioTotal()}</h4> 
              
-             <button onClick={()=> clear (cart)} className="btn btn-danger" >Limpiar Carrito Completo </button>
-             <button onClick={handleClick}  className="btn btn-success" >Finalizar Compra</button>
+             <button onClick={()=> clear (cart)} className="btn btn-danger " >Limpiar Carrito Completo </button>
+             <button onClick={handleClick}  className="btn btn-success " >Finalizar Compra</button>
             </aside>
-            
+         
             </>
     );
 }

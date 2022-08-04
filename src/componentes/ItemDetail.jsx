@@ -28,7 +28,7 @@ export const ItemDetail =({data})=>{
             {
               alCarrito
                ? <Link to ='/cart' type="button" className="btn btn-dark ">Finalizar Compra</Link>
-               : <ItemCount initial={1} stock={6} onAdd={onAdd}/>
+               : <ItemCount initial={1} stock={10} onAdd={onAdd}/>
             }
 
         </div>
