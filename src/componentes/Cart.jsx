@@ -1,4 +1,4 @@
-import { addDoc, collection} from'firebase/firestore';
+import { addDoc, collection, serverTimestamp} from'firebase/firestore';
 import { db } from '../firebase/firebase';
 import React from "react";
 import { useCartContext } from "./CartContext";
@@ -19,10 +19,11 @@ const Cart = () => {
 		},
 		items: cart.map((product) => ({
 			id: product.id, 
-			titulo: product.titulo,
+			nombre: product.nombre,
 			precio: product.precio,
 			quantity: product.quantity,
 		})),
+        date: serverTimestamp(),
 		total: precioTotal(),
 	}
     
@@ -42,18 +43,19 @@ const Cart = () => {
         );
     }
     return (
-        <>
-
+      <>
+    
         : {
-            
              cart.map (product =><ItemCart key={product.id} product={product}/>)}
-             <div className="cerrar-compra">
+            
+             <aside className="cerrar-compra">
              <h4 >El precio total de su compra es de ${precioTotal()}</h4> 
-
+             
              <button onClick={()=> clear (cart)} className="btn btn-danger" >Limpiar Carrito Completo </button>
              <button onClick={handleClick}  className="btn btn-success" >Finalizar Compra</button>
-            </div>
-        </>
+            </aside>
+            
+            </>
     );
 }
 

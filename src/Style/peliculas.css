@@ -21,17 +21,104 @@
     background-color: whitesmoke;
 }
 
+.totalItems{
+    color:rgba(0, 0, 0, 0.597);
+    display: block;
+    
+}
 
-.nav_link{
+.NavLink{
     text-decoration: none;
-    font-size: 70px;
-    color: red;
-    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:3rem;
+    color: antiquewhite;
 }
-.navbarItems{
-    margin-left: 200px;
-    font-size: 20px;
+
+.div-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height:70px;
+    background-color: #1b304b;
 }
+
+.list-container{
+    display: flex;
+    list-style: none;
+    font-size: 16px;
+    margin-top: 23px;
+
+}
+
+.list-container li a {
+    position: relative;
+    display: flex;
+    color: antiquewhite;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: all .3s;
+    align-items: center;
+
+}
+.list-container li a::before {
+    content:"";
+    height: 3px;
+    width: 0%;
+    background: black;
+    position: absolute;
+    bottom: -2px;
+    left:0;
+    transition: 0.3s ease-out;
+}
+
+.list-container li a:hover::before {
+width: 100%;
+}
+.imagen-icon{
+    margin-top: 15px;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.input-container{
+    width: 220px;
+    height: 45px;
+    margin-top: 6px;
+    text-align: center;
+    outline: none;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid black;
+
+}
+
+.img-buscador{
+    position: relative;
+    left: 23px;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+}
+
+
+.icons-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: -25px;
+}
+
+
+.login {
+    position: relative;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    margin-left: 25px;
+}
+
+
 
 .itemCard{
     width: 18rem; 
@@ -54,7 +141,7 @@
  }
  
  .item-price{
-     color:violet;
+     color:black;
      font-size: 27px;
      text-align: center;
      font-weight: bold;
@@ -124,3 +211,31 @@ div ul li{
  }
 }
 
+@media (max-width:785px) {
+    .div-container{
+        flex-wrap: wrap;
+     
+    
+    }
+    .list-container{
+        position: relative;
+    
+        display: flex;
+        top:-30px;
+        left: -9px;
+    
+    }
+    .list-container li a{
+        margin-top: 35px;
+    }
+    
+    }
+    
+    
+    @media (max-width:785px) {
+        .div-container{
+    
+            height: 400px;
+    
+        }
+    }

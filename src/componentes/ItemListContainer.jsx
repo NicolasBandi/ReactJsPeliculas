@@ -29,7 +29,6 @@ export const ItemListContainer = ({imprimirPeliculas}) =>{
 
     return(
         <>
-        <div>{imprimirPeliculas}</div>
         <ItemList data ={data}/>
         </>
   )

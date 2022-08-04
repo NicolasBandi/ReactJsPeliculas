@@ -5,20 +5,21 @@ import {NavLink} from 'react-router-dom'
 
 function Navbar () {
  return(
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <NavLink className="nav_link" to='/' >CinemaComics</NavLink>
-  <div className="navbarItems" >
-    <ul className="navbar-nav" >
-    <li className="nav-item active" > 
-    <NavLink className="navFormato" to='/formato/4k'> 4k </NavLink>
+
+<nav className="div-container">
+  <NavLink className="NavLink" to='/' >CinemaComics</NavLink>
+  <div >
+    <ul  className='list-container' >
+    <li  > 
+    <NavLink to='/formato/4k'> 4k </NavLink>
       </li>
-      <li className="nav-item active">
-      <NavLink className="navFormato"  to='/formato/Bluray'> Bluray </NavLink>
+      <li >
+      <NavLink to='/formato/Bluray'> Bluray </NavLink>
       </li>
-      <li className="nav-item">
-      <NavLink className="navFormato"  to='/formato/DvD'> Dvd </NavLink>
+      <li >
+      <NavLink to='/formato/DvD'> Dvd </NavLink>
       </li>
-    <li className="nav-item">
+    <li >
       <CartWidget/>
     </li>
      
