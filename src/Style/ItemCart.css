@@ -35,17 +35,6 @@
 }
 
 
-.btn-danger{
-    position:relative;
-    height: 40px;
-
-
-
-}
-.btn-success{
-    position:relative;
-    height: 40px;
-}
 
 
 
@@ -71,4 +60,20 @@
     background-color: blanchedalmond;
     top:50px;
     right: 1px;
+}
+
+
+#clean{
+    position: relative;
+    top: 300px;
+}
+
+.Precio1 {
+    position: relative;
+    top: 300px;
+}
+
+#finish {
+    position: relative;
+    top: 320px;
 }

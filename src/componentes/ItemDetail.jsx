@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, {useState} from 'react';
 import '../Style/ItemDetail.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './ItemCount';
-import { Link } from "react-router-dom";
-import { useCartContext } from "./CartContext";
+import { Link } from 'react-router-dom';
+import { useCartContext } from './CartContext';
 
 
 export const ItemDetail =({data})=>{

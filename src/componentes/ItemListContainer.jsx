@@ -4,7 +4,7 @@ import React,{useEffect,useState} from 'react';
 import {useParams} from 'react-router-dom'
 import {getFirestore, collection , getDocs, query, where} from 'firebase/firestore';
 
-export const ItemListContainer = ({imprimirPeliculas}) =>{
+export const ItemListContainer = () =>{
    const [data,setData]=useState([]);
 
    const { formatoId } = useParams();
@@ -14,7 +14,7 @@ export const ItemListContainer = ({imprimirPeliculas}) =>{
     const queryCollection=collection(querydb,'products');
 
     if(formatoId){
-      
+
     const queryFilter =query(queryCollection, 
     where('formato', '==', formatoId))
     getDocs(queryFilter)
@@ -23,7 +23,7 @@ export const ItemListContainer = ({imprimirPeliculas}) =>{
     }else{
       getDocs(queryCollection)
       .then(res=>setData(res.docs.map(product =>({id:product.id, ...product.data()}))))
-  
+
     }
 },[formatoId])
 

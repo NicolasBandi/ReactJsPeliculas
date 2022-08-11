@@ -9,10 +9,10 @@ const ItemList =({data=[]}) => {
           { data.map ( pelicula => {
             return <Item key={pelicula.id} info={pelicula}/>
              }
-        )   
+        )
     }
      </div>
   );
 };
 
-export default ItemList; 
+export default ItemList;
