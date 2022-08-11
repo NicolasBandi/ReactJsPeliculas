@@ -1,10 +1,8 @@
 # Proyecto React Coderhouse  31225
 
-Simulación de un E-commerce de venta de peliculas en varios formatos estructurada por 
-componentes.
-
 Simulación de un E-commerce de venta de peliculas en varios formatos estructurada por componentes.
-Profesor: Alex Marin Mendez
+
+Profesor: Alex Marin Mendez 
 
 Estructura
 
